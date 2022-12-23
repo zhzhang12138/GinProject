@@ -1,0 +1,535 @@
+{
+	"info": {
+		"_postman_id": "b038f37c-4587-41d6-b945-9455b15bd009",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "15196179"
+	},
+	"item": [
+		{
+			"name": "0、健康检测",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8888/health"
+			},
+			"response": []
+		},
+		{
+			"name": "1、获取验证码",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authority",
+						"value": "demo.gin-vue-admin.com"
+					},
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "accept-language",
+						"value": "zh-CN,zh;q=0.9,en;q=0.8"
+					},
+					{
+						"key": "cache-control",
+						"value": "no-cache"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "cookie",
+						"value": "Hm_lvt_40635ef25e31fa2a58ed58f935d0a1a0=1669704109,1669965930,1670813951,1671004446; Hm_lpvt_40635ef25e31fa2a58ed58f935d0a1a0=1671613090"
+					},
+					{
+						"key": "origin",
+						"value": "https://demo.gin-vue-admin.com"
+					},
+					{
+						"key": "pragma",
+						"value": "no-cache"
+					},
+					{
+						"key": "referer",
+						"value": "https://demo.gin-vue-admin.com/"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-origin"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "x-token",
+						"value": ""
+					},
+					{
+						"key": "x-user-id",
+						"value": "undefined"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{}"
+				},
+				"url": "http://127.0.0.1:8888/base/captcha"
+			},
+			"response": []
+		},
+		{
+			"name": "2、创建用户",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authority",
+						"value": "demo.gin-vue-admin.com"
+					},
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "accept-language",
+						"value": "zh-CN,zh;q=0.9,en;q=0.8"
+					},
+					{
+						"key": "cache-control",
+						"value": "no-cache"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "cookie",
+						"value": "Hm_lvt_40635ef25e31fa2a58ed58f935d0a1a0=1669704109,1669965930,1670813951,1671004446; Hm_lpvt_40635ef25e31fa2a58ed58f935d0a1a0=1671613090"
+					},
+					{
+						"key": "origin",
+						"value": "https://demo.gin-vue-admin.com"
+					},
+					{
+						"key": "pragma",
+						"value": "no-cache"
+					},
+					{
+						"key": "referer",
+						"value": "https://demo.gin-vue-admin.com/"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-origin"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVVUlEIjoiMDJkNTAxNTUtNDgyOS00ODlmLTg4NDMtMzc2Y2UwYWM0ZTNjIiwiSUQiOjEsIlVzZXJuYW1lIjoiYWRtaW4iLCJOaWNrTmFtZSI6Ik1yLuWlh-a3vCIsIkF1dGhvcml0eUlkIjo4ODgsIkJ1ZmZlclRpbWUiOjg2NDAwLCJleHAiOjE2NzIyOTkwOTIsImlzcyI6InFtUGx1cyIsIm5iZiI6MTY3MTY5MzI5Mn0.1VOkdGIl12XaGhkmZoPTldI3kn9Rd5VIgOAUKc7zTK4"
+					},
+					{
+						"key": "x-user-id",
+						"value": "1"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"\",\n    \"password\": \"123456\",\n    \"nickName\": \"123456\",\n    \"headerImg\": \"\",\n    \"authorityId\": 9528,\n    \"authorityIds\": [\n        9528\n    ],\n    \"enable\": 1,\n    \"userName\": \"测试用户123456\",\n    \"phone\": \"123456\",\n    \"email\": \"123456\"\n}"
+				},
+				"url": "http://127.0.0.1:8888/user/admin_register"
+			},
+			"response": []
+		},
+		{
+			"name": "3、用户登录",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authority",
+						"value": "demo.gin-vue-admin.com"
+					},
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "accept-language",
+						"value": "zh-CN,zh;q=0.9,en;q=0.8"
+					},
+					{
+						"key": "cache-control",
+						"value": "no-cache"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "cookie",
+						"value": "Hm_lvt_40635ef25e31fa2a58ed58f935d0a1a0=1669704109,1669965930,1670813951,1671004446; Hm_lpvt_40635ef25e31fa2a58ed58f935d0a1a0=1671613090"
+					},
+					{
+						"key": "origin",
+						"value": "https://demo.gin-vue-admin.com"
+					},
+					{
+						"key": "pragma",
+						"value": "no-cache"
+					},
+					{
+						"key": "referer",
+						"value": "https://demo.gin-vue-admin.com/"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-origin"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "x-token",
+						"value": ""
+					},
+					{
+						"key": "x-user-id",
+						"value": "undefined"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"a303176530\",\n    \"password\": \"123456\",\n    \"captcha\": \"561111102\",\n    \"captchaId\": \"T2z1zb9K3TH2oXQqFMbX\"\n}"
+				},
+				"url": "http://127.0.0.1:8888/base/login"
+			},
+			"response": []
+		},
+		{
+			"name": "4、获取用户列表",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authority",
+						"value": "demo.gin-vue-admin.com"
+					},
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "accept-language",
+						"value": "zh-CN,zh;q=0.9,en;q=0.8"
+					},
+					{
+						"key": "cache-control",
+						"value": "no-cache"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "cookie",
+						"value": "Hm_lvt_40635ef25e31fa2a58ed58f935d0a1a0=1669704109,1669965930,1670813951,1671004446; Hm_lpvt_40635ef25e31fa2a58ed58f935d0a1a0=1671613090"
+					},
+					{
+						"key": "origin",
+						"value": "https://demo.gin-vue-admin.com"
+					},
+					{
+						"key": "pragma",
+						"value": "no-cache"
+					},
+					{
+						"key": "referer",
+						"value": "https://demo.gin-vue-admin.com/"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-origin"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVVUlEIjoiMDJkNTAxNTUtNDgyOS00ODlmLTg4NDMtMzc2Y2UwYWM0ZTNjIiwiSUQiOjEsIlVzZXJuYW1lIjoiYWRtaW4iLCJOaWNrTmFtZSI6Ik1yLuWlh-a3vCIsIkF1dGhvcml0eUlkIjo4ODgsIkJ1ZmZlclRpbWUiOjg2NDAwLCJleHAiOjE2NzIzNjcyMjYsImlzcyI6InFtUGx1cyIsIm5iZiI6MTY3MTc2MTQyNn0.NDfjjSdvxzQ5WBopdqMyj4BY3Zh-EbJGFPeb6uFHP-A"
+					},
+					{
+						"key": "x-user-id",
+						"value": "1"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"page\": 1,\n    \"pageSize\": 10\n}"
+				},
+				"url": "http://127.0.0.1:8888/user/getUserList"
+			},
+			"response": []
+		},
+		{
+			"name": "5、修改用户",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "authority",
+						"value": "demo.gin-vue-admin.com"
+					},
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "accept-language",
+						"value": "zh-CN,zh;q=0.9,en;q=0.8"
+					},
+					{
+						"key": "cache-control",
+						"value": "no-cache"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "cookie",
+						"value": "Hm_lvt_40635ef25e31fa2a58ed58f935d0a1a0=1669704109,1669965930,1670813951,1671004446; Hm_lpvt_40635ef25e31fa2a58ed58f935d0a1a0=1671613090"
+					},
+					{
+						"key": "origin",
+						"value": "https://demo.gin-vue-admin.com"
+					},
+					{
+						"key": "pragma",
+						"value": "no-cache"
+					},
+					{
+						"key": "referer",
+						"value": "https://demo.gin-vue-admin.com/"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-origin"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVVUlEIjoiMDJkNTAxNTUtNDgyOS00ODlmLTg4NDMtMzc2Y2UwYWM0ZTNjIiwiSUQiOjEsIlVzZXJuYW1lIjoiYWRtaW4iLCJOaWNrTmFtZSI6Ik1yLuWlh-a3vCIsIkF1dGhvcml0eUlkIjo4ODgsIkJ1ZmZlclRpbWUiOjg2NDAwLCJleHAiOjE2NzIzNjcyMjYsImlzcyI6InFtUGx1cyIsIm5iZiI6MTY3MTc2MTQyNn0.NDfjjSdvxzQ5WBopdqMyj4BY3Zh-EbJGFPeb6uFHP-A"
+					},
+					{
+						"key": "x-user-id",
+						"value": "1"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ID\": 3,\n    \"userName\": \"a303176530\",\n    \"nickName\": \"用户1222\",\n    \"email\": \"333333333@qq.com\"\n}"
+				},
+				"url": "http://127.0.0.1:8888/user/setUserInfo"
+			},
+			"response": []
+		},
+		{
+			"name": "6、删除用户",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "authority",
+						"value": "demo.gin-vue-admin.com"
+					},
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "accept-language",
+						"value": "zh-CN,zh;q=0.9,en;q=0.8"
+					},
+					{
+						"key": "cache-control",
+						"value": "no-cache"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "cookie",
+						"value": "Hm_lvt_40635ef25e31fa2a58ed58f935d0a1a0=1669704109,1669965930,1670813951,1671004446; Hm_lpvt_40635ef25e31fa2a58ed58f935d0a1a0=1671613090"
+					},
+					{
+						"key": "origin",
+						"value": "https://demo.gin-vue-admin.com"
+					},
+					{
+						"key": "pragma",
+						"value": "no-cache"
+					},
+					{
+						"key": "referer",
+						"value": "https://demo.gin-vue-admin.com/"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-origin"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVVUlEIjoiZjE5MTdmZDEtOGFkYi00MDkxLTkwMWEtMjEwN2M5MmVlODMzIiwiSUQiOjIsIlVzZXJuYW1lIjoiYTMwMzE3NjUzMCIsIk5pY2tOYW1lIjoi55So5oi3MTIyMiIsIkF1dGhvcml0eUlkIjowLCJCdWZmZXJUaW1lIjo4NjQwMCwiZXhwIjoxNjcyMzY5MzAzLCJpc3MiOiJxbVBsdXMiLCJuYmYiOjE2NzE3NjM1MDN9.ni95o9OJmF1Pk8-EefHziF34ILe4VGIEdr2cf9_iC70"
+					},
+					{
+						"key": "x-user-id",
+						"value": "1"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 3\n}"
+				},
+				"url": "http://127.0.0.1:8888/user/deleteUser"
+			},
+			"response": []
+		}
+	]
+}

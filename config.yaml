@@ -1,0 +1,59 @@
+system:
+  env: public
+  addr: 8888
+  db-type: mysql
+  oss-type: local
+  use-multipoint: false
+  use-redis: false
+  iplimit-count: 15000
+  iplimit-time: 3600
+jwt:
+  signing-key: 473b6e31-2535-4ac9-8edf-54598676a651
+  expires-time: 7d
+  buffer-time: 1d
+  issuer: qmPlus
+zap:
+  level: info
+  prefix: '[gin-project/server]'
+  format: console
+  director: log
+  encode-level: LowercaseColorLevelEncoder
+  stacktrace-key: stacktrace
+  max-age: 0
+  show-line: true
+  log-in-console: true
+db-list:
+  - disable: true
+    type: ""
+    alias-name: ""
+    path: ""
+    port: ""
+    config: ""
+    db-name: ""
+    username: ""
+    password: ""
+    prefix: ""
+    singular: false
+    engine: ""
+    max-idle-conns: 10
+    max-open-conns: 100
+    log-mode: ""
+    log-zap: false
+mysql:
+  path: 47.104.204.225
+  port: "3306"
+  config: charset=utf8mb4&parseTime=True&loc=Local
+  db-name: gin-project
+  username: root
+  password: "123456"
+  prefix: ""
+  singular: false
+  engine: ""
+  max-idle-conns: 10
+  max-open-conns: 100
+  log-mode: error
+  log-zap: false
+captcha:
+  key-long: 4
+  img-width: 240
+  img-height: 80
